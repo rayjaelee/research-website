@@ -11,23 +11,219 @@
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <nav class="first-nav">
-            <img class="uw-logo" src="assets/img/long-left-uw-logo.png" alt="UW-logo">
-            <h1 class="top-banner">QENS RESEARCH</h1>
+            <div id="img-container">
+                <a id="uw-link" href="https://www.washington.edu/">
+                    <img class="uw-logo" src="assets/img/long-left-uw-logo.png" alt="UW-logo">
+                </a>
+            </div>
+            <div id="title-container">
+                <h1 class="top-banner"><a href="index.html">QENS RESEARCH</a></h1>
+            </div>
         </nav>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="research.html">The Research</a>
-            <a class="mdl-navigation__link" href="people-main.html">The People</a>
-            <a class="mdl-navigation__link" href="publications.html">Publications</a>
-            <a class="mdl-navigation__link" href="contact.html">Contact Us</a>
+            <a class="mdl-navigation__link" href="#welcome">About Us</a>
+            <a class="mdl-navigation__link" href="#material">The Research</a>
+            <a class="mdl-navigation__link" href="#people">The People</a>
+            <a class="mdl-navigation__link" href="#contact">Contact Us</a>
         </nav>
     </header>
 
     <main>
+        <section class="welcome-section" id="welcome">
+            <div class="overlay"></div>
+            <h1 style="font-weight: 700;">Welcome to QENS Research</h1>
+            <h3>Research led by Dr. Amal al-Wahish, we study rare-earth material thru <br> Quasi-Elastic Neutron Scattering</h3>
+        </section>
+
+        <section class="material-section" id="material">
+            <h1 style="font-family: 'Encode Sans', sans-serif; font-weight: 700; color: white;">Materials we are researching</h1>
+            
+            <div class="material-accordion">
+                <div class="tab-material">
+                    <button class="tablinks-material" onclick="openMaterial(event, 'BaHPO4')" id="defaultOpenMaterial">BaHPO4</button>
+                    <button class="tablinks-material" onclick="openMaterial(event, 'CaHPO4')">CaHPO4</button>
+                    <button class="tablinks-material" onclick="openMaterial(event, 'MgHPO4;3H20')">MgHPO4;3H20</button>
+                    <button class="tablinks-material" onclick="openMaterial(event, 'SrHPO4')">SrHPO4</button>
+                </div>
+                  
+                  <!-- Tab content -->
+                <div id="BaHPO4" class="tabcontent-material">
+                    <h3>BaHPO4</h3>
+                    <p>To be updated...</p>
+                </div>
+                
+                <div id="CaHPO4" class="tabcontent-material">
+                    <h3>CaHPO4</h3>
+                    <p>To be updated...</p>
+                </div>
+                
+                <div id="MgHPO4;3H20" class="tabcontent-material">
+                    <h3>MgHPO4;320</h3>
+                    <p>To be updated...</p>
+                </div>
+
+                <div id="SrHPO4" class="tabcontent-material">
+                    <h3>SrHPO4</h3>
+                    <p>To be updated...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="people-section" id="people">
+            <h1 style="font-family: 'Encode Sans', sans-serif; font-weight: 700;">People Involved in this Research</h1>
+
+            <div class="accordion-container">
+                <div class="tab">
+                    <button class="tablinks" onclick="openProfile(event, 'wahish')" id="defaultOpen">Dr. al-Wahish</button>
+                    <button class="tablinks" onclick="openProfile(event, 'patrick')">Patrick LaChapelle</button>
+                    <button class="tablinks" onclick="openProfile(event, 'raymond')">Raymond Lee</button>
+                    <button class="tablinks" onclick="openProfile(event, 'nikou')">Nikou Lei</button>
+                    <button class="tablinks" onclick="openProfile(event, 'michael')">Michael Lindner</button>
+                    <button class="tablinks" onclick="openProfile(event, 'joseph')">Joseph Livesey</button>
+                    <button class="tablinks" onclick="openProfile(event, 'claire')">Claire Olde Loohuis</button>
+                    <button class="tablinks" onclick="openProfile(event, 'ian')">Ian Williams</button>
+    
+                </div>
+                <div id="wahish" class="tabcontent">
+                    <h2>Dr. Amal al-Wahish</h2>
+                    <h3>Principal Investigator (PI)</h3>
+                    <p>Dr. al-Wahish bio</p>
+                </div>
+                  
+                <div id="patrick" class="tabcontent">
+                    <h2>Patrick LaChapelle</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Patrick is a dedicated third year Physics student at the University of Washington earning his Undergraduate degree in Comprehensive Physics. 
+                        <br>
+                        <br>
+                        Patrick began studying Physics at Highline Community College and has since become absorbed with the subject. As he prepares for Graduate school, he is working on Arctic Sea Ice Research with Dr. Madison Smith of the UW Applied Physics Lab in addition to Condensed Matter Research with Dr. al-Wahish along with his Undergraduate studies. Patrick has a wealth of experience with multiple internships at NASA and other places and prides himself on his unrelenting work ethic.
+                    </p> 
+                    <a href="https://www.linkedin.com/in/pat-lachapelle-75ba4118b/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+                  
+                <div id="raymond" class="tabcontent">
+                    <h2>Raymond Lee</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Raymond is a third year Physics student at University of Washington with great passion and motivation for the subject.
+                        <br>
+                        <br>
+                        Before his move to Seattle, he studied at Alice Smith British International School in Kuala Lumpur, Malaysia. Where he studied Physics, Further Mathematics, Mathematics and Computer Science as part of his Advanced Level (A-Level) secondary school qualification. Currently, he is working for Bachelor of Science degree in Physics, hoping to pursue graduate school in Physics and/or Mathematics. 
+                        <br>
+                        <br>
+                        He has deep interest in subfield of High Energy Physics, Quantum Computation, Statistical Physics and more. Currently he is part of Dr. al-Wahish's Quasi-Elastic Neutron Scattering (QENS) Research team and also part of Professor Boris Blinov's Trapped Ion Quantum Computing Research team.
+                    </p>
+                    <a href="https://www.linkedin.com/in/rayjaelee/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+    
+                <div id="nikou" class="tabcontent">
+                    <h2>Nikou Lei</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Nikou is a junior at the University of Washington studying mathematics and physics. 
+                        <br>
+                        <br> 
+                        She is excited to work with Dr. al-Wahish and her colleagues on investigating neutron conductive material by neutron scattering. In her free time, Nikou enjoys doing math with her best friend as well as writing poetry, reading literature in her bedroom as well as traveling around the world. 
+                    </p>
+                    <a href="https://www.linkedin.com/in/nikou-l-b51152115/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+                
+                <div id="michael" class="tabcontent">
+                    <h2>Michael Lindner</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Michael Lindner is an undergraduate student at the University of Washington studying Physics and Astronomy, with a background in programming for data applications in Python and MATLAB.
+                        <br> 
+                        <br>
+                        He is aiming at graduate studies in astrophysics and to do research in cosmology. In his spare time, he enjoys music and rock-climbing.
+                    </p>
+                    <a href="https://www.linkedin.com/in/michael-lindner-563077171/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+    
+                <div id="joseph" class="tabcontent">
+                    <h2>Joseph Livesey</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Joseph is a second-year undergraduate at the University of Washington studying physics and astronomy. 
+                        <br>
+                        <br>
+                        He graduated from a Seattle-area high school with an International Baccalaureate Diploma in 2018. Since September 2019, he has been working with Dr. Wahish in her investigation of proton conductivity in alkaline phosphate lattices using quasi-elastic neutron scattering.
+                        Joseph intends to pursue a PhD in astronomy upon his graduation from UW. His research interests are currently developing. In addition to his neutron scattering research, he is interested in cosmology and exoplanetology.
+                    </p>
+                    <a href="https://www.linkedin.com/in/joseph-r-livesey" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+    
+                <div id="claire" class="tabcontent">
+                    <h2>Claire Olde Loohuis</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Claire is an enthusiastic Physics and Astronomy student in her third and final year at the University of Washington.
+                        <br>
+                        <br>
+                        Claire began her interest in physics in high school, after having long and detailed conversations with her father and listening, sometimes at his insistence, to many informational programs. Through the Running Start program at Bellevue College, she graduated in 2017 with an Associate’s Degree, and went on initially to study Astronomy at the University of Washington. As she learned more, her interests expanded, and her research interests now include quantum mechanics and cosmology, in addition to her current neutron scattering research. 
+                        <br>
+                        <br>
+                        Though she initially struggled with the balance of school and family issues, she is now making up for lost time by conducting multiple research projects. Claire hopes to travel the world after her graduation to learn as much as possible about her chosen profession before enrolling in an astrophysics PhD program.
+                    </p>
+                    <a href="https://www.linkedin.com/in/claire-olde-loohuis-940020188/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+    
+                <div id="ian" class="tabcontent">
+                    <h2>Ian Williams</h2>
+                    <h3>Undergraduate Student</h3>
+                    <p>
+                        Ian is a tech-industry veteran who has turned his passion and hobby into a new career.
+                        <br>
+                        <br>
+                        Ian graduated from Worcester Polytechnic Institute in 2011 with High Distinction and went on to become a software engineer at Microsoft. Over the next seven years he worked on a .NET implementation of the OData protocol, a variety of incubation projects for several organizations using lean startup methodologies, and Azure DevOps, Microsoft’s project management toolkit for dev teams.
+                        <br>
+                        <br>
+                        After years of listening to recorded lectures on physics and many areas in the natural sciences, Ian now attends the University of Washington. He is taking physics, math, and astronomy classes as he works with Dr. Wahish on investigating proton conductivity of alkaline phosphates via quasi-elastic neutron scattering.
+                        <br>
+                        <br>
+                        Ian is looking to enroll in a physics or astrophysics PhD program in the next 1-2 years. In addition to his neutron scattering research, his research interests include cosmology, particle theory, and exoplanetary science.
+                    </p>
+                    <a href="https://www.linkedin.com/in/ian-williams-3696aa24/" class="linkedin-btn"><i class="fa fa-linkedin-square" style="font-size:36px"></i></a>
+                </div>
+            </div>
+
+            
+
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h1 style="font-family: 'Encode Sans', sans-serif; font-weight: 700;">Contact Us</h1>
+            <h3>We would love to have feedback on anything!</h3>
+            <h3>Feel free to contact us and we will try to reply within 7 days!</h3>
+            <div class="form-container">
+                <form id="contact-us-form" action="https://formspree.io/xayedlyj" method="POST">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" name="name">
+                        <label class="mdl-textfield__label" for="sample3">Your Name</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email" name="_replyto">
+                        <label class="mdl-textfield__label" for="sample3">Email Address</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <textarea class="mdl-textfield__input" type="text" rows= "3" name="message" ></textarea>
+                        <label class="mdl-textfield__label" for="sample5">Your Message</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Send" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    </div>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer class="mdl-mega-footer">
@@ -35,15 +231,16 @@
                 
             <div class="mdl-mega-footer__drop-down-section">
                 <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-                <h1 class="mdl-mega-footer__heading">The Research</h1>
+                <h1 class="mdl-mega-footer__heading">Menu</h1>
                 <ul class="mdl-mega-footer__link-list">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Applications</a></li>
-                    <li><a href="#">Partners</a></li>
+                    <li><a href="#welcome">About</a></li>
+                    <li><a href="#material">The Research</a></li>
+                    <li><a href="#people">The People</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
                 
-            <div class="mdl-mega-footer__drop-down-section">
+            <!-- <div class="mdl-mega-footer__drop-down-section">
                 <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
                 <h1 class="mdl-mega-footer__heading">The People</h1>
                 <ul class="mdl-mega-footer__link-list">
@@ -58,12 +255,18 @@
                 <ul class="mdl-mega-footer__link-list">
                     <li><a href="#">Email</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
                 
         <div class="mdl-mega-footer__bottom-section">
             <div class="mdl-logo">QENS Research</div>
+            <div>Website created by Raymond Lee</div>
         </div>        
     </footer>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpenMaterial").click();
+    </script>
 </body>
 </html>
