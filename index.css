@@ -85,8 +85,10 @@ main {
 }
 
 .material-section {
-    height: 600px;
+    min-height: 600px;
     background-color: #4b2e83;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
 .material-section h1 {
@@ -233,5 +235,13 @@ html {
 }
 
 .linkedin-btn {
+    color: black;
+}
+
+.website-btn:visited {
+    color: black;
+}
+
+.website-btn:visited {
     color: black;
 }
